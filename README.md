@@ -4,6 +4,8 @@ A production-ready, scalable microservices-based notification system built with 
 
 ## 🏗️ Architecture Overview
 
+![System Architecture Diagram](docs/images/architecture-diagram.png)
+
 ### System Components
 
 - **Event Ingestion Service** (Port 8081): Receives and validates notification requests with API documentation
