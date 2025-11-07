@@ -1,0 +1,28 @@
+package com.notification.ingestion.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class RecipientRequest {
+    
+    @NotBlank(message = "User ID is required")
+    private String userId;
+    
+    @NotEmpty(message = "At least one channel is required")
+    private List<Channel> channels;
+    
+    public enum Channel {
+        EMAIL, SMS, PUSH, WEBHOOK
+    }
+}
+
